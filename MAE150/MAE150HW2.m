@@ -74,4 +74,3 @@ end
 disp(counter)
 (counter)/n
 
-%% Q3
