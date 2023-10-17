@@ -73,5 +73,3 @@ for i = 1:n
 end
 disp(counter)
 (counter)/n
-
-%% Q3
