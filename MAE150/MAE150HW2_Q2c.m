@@ -1,5 +1,5 @@
 %% Q2c
-clear all
+clear all; clc
 n = 100000;
 HnomA = 65;
 HnomB = 97;
@@ -18,7 +18,7 @@ D_unif = zeros(1,n);
 H_nom = zeros(1,n);
 D_nom = zeros(1,n);
 H_C = zeros(1,n);
-H_D = zeros(1,n);
+D_C = zeros(1,n);
 % uniform distribution
 for i = 1:n
     H_unif(i) = (HmaxA - HminA)*rand() + HminA;
@@ -61,3 +61,17 @@ hold on
 histogram(D_C, edges, "Normalization", "probability");
 hold off
 title('H and D Scenario C');
+
+%% Q2cc
+counter = 0;
+for i = 1:n
+    if H_C(i) < 84;
+        counter = counter + 1;
+    else 
+        counter = counter + 0;
+    end
+end
+disp(counter)
+(counter)/n
+
+%% Q3
